@@ -55,14 +55,13 @@ def get_damage(
     """
 
     # Compute distance from ship to hazard
-    # <!!! INSERT YOUR CODE HERE !!!>
+    dist = get_distance(ship_position,hazard_position)
 
     # Check if ship is safe from hazard
-    # <!!! INSERT YOUR CODE HERE !!!>
+    safe = hazard.safe_dist
 
     # Compute the actual damage
-    # <!!! INSERT YOUR CODE HERE !!!>
+    damage = 0 if dist >= safe else (safe - dist) / safe
 
     # Return the damage you computed
-    # <!!! REPLACE THE LINE BELLOW WITH YOUR OWN !!!>
-    return 0
+    return damage
